@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple Rails App</title>
+        <meta charset='utf-8'>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,500,700|Vollkorn:900" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <div class="mainContainer">
+
+        <div id="navigation">
+          <ul class="navList">
+            <li><a class="topbot" href="#top">Top</a></li>
+            <li><a href="#before">Before you begin</a></li>
+            <li><a href="#settingUp">Setting up</a></li>
+            <li>
+              <ul class="internalUl">
+                <li><a href="#newProject">Create new project</a></li>
+                <li><a href="#startServer">Start the server</a></li>
+              </ul>
+            </li>
+            <li><a href="#createPage">Create a page</a></li>
+            <li>
+              <ul class="internalUl">
+                <li><a href="#openText">Open text editor</a></li>
+                <li><a href="#createHome">Create homepage</a></li>
+                <li><a href="#changeRoot">Change root page</a></li>
+              </ul>
+            </li>
+            <li><a href="#customize">Customize page</a></li>
+            <li>
+              <ul class="internalUl">
+                <li><a href="#addHTML">Add HTML</a></li>
+                <li><a href="#addImages">Add images</a></li>
+                <li><a href="#addCSS">Add CSS</a></li>
+              </ul>
+            </li>
+            <li><a class="topbot" href="#bottom">Conclusion</a></li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <a name="top"></a>
+          <h3>A Beginner's Guide to:</h3>
+          <h1 class="title">Building a Website with Ruby on Rails!</h1>
+          <p>By Sam Behrens</p>
+          <hr/>
+          <h2 id="before">Before you begin:</h2>
+          <p>
+            This guide will help you build your own website using the Rails Framework for Ruby. You should already have a basic understanding of the Ruby programming language and its syntax and you should know what Rails is. I also highly recommend that you know HTML and CSS. This guide covers only OSX and Linux however it would work on Windows with Git Bash and not in command prompt.
+          </p>
+          <p>
+            I am not going to cover installation of Ruby and Rails so if you haven’t done so, install them now. Here is a useful website for that: <a href="http://installrails.com/" target="_blank">installrails.com</a>.
+          </p>
+          <h2 id="settingUp">Setting up your project:</h2>
+          <h3 id="newProject">1. &nbsp; Create a new Rails Project</h3>
+          <p>
+            Open Terminal and navigate to the desktop. This is where you will create your project. To do this, enter:
+          </p>
+          <div class="code">
+            <code>cd ~/Desktop</code>
+          </div>
+          <p>It should look like this: <br>(instead of my name, yours will be there)</p>
+          <img class="small" title="cd stands for change directory" src="images/cdDesktop.png"/>
+          <h4>Create your new project.</h4>
+          <p>In Terminal, type:</p>
+          <div class="code">
+            <code>rails new sample_app</code>
+          </div>
+          <p class="caption">
+            I am going to call my project sample_app but you can enter whatever you want instead. Just remember, any spaces in your name need to be replaced with underscores “_”.
+          </p>
+          <p>You have just created your first Rails project. Nice job!</p>
+          <h4>Let’s navigate to your new project in the Terminal.</h4>
+          <p>In Terminal, type:</p>
+          <div class="code">
+            <code>cd sample_app</code>
+          </div>
+          <p>Done!</p>
+          <h3 id="startServer">2. &nbsp; Start the server so we can see our website</h3>
+          <p>Now that we have our project created, we want to get it running. Here is how to do that.</p>
+          <p>In Terminal, type:</p>
+          <div class="code">
+            <code>rails server</code>
+          </div>
+          <p class="caption">This can be shortened to 'rails s'.</p>
+          <p>You should see something like this:</p>
+          <img class="small" src="images/railsServer.png"/>
+          <p>In your web browser, enter <a href="http://0.0.0.0:3000/" target="_blank">http://0.0.0.0:3000/</a> and you should see a Welcome to Rails page.</p>
+          <img src="images/welcomePage.png"/>
+          <p>For the duration of this guide, I will have the server running. Since we are doing this, we need to open a new Terminal window to enter future commands.</p>
+          <h2 id="createPage">Create a webpage:</h2>
+          <h3 id="openText">1. &nbsp; Open your preferred text editor.</h3>
+          <p>
+            I prefer Brackets because it is simple and looks good. A more popular one that you may use is Sublime Text. Both will work for our purposes.
+          </p>
+          <p>
+            Open your project folder in your text editor. You should be able to see something like this with all of the folders laid out on the left.
+          </p>
+          <img src="images/openTextEditor.png"/>
+          <p>
+            Take a look around and familiarize yourself with where things are. The main folders to look out for are assets, controllers, models, and views.
+          </p>
+          <h3 id="createHome">2. &nbsp; Let's create our homepage.</h3>
+          <p>
+            First, we need to go back to the Terminal window that we opened after we started our server. Remember not to use the one running the server or you will have to stop it.
+          </p>
+          <p>In Terminal, type:</p>
+          <div class="code">
+            <code>rails generate controller welcome homepage</code>
+          </div>
+          <p class="caption">Here, 'generate' can be shortened to just 'g'.</p>
+          <h4>Let's go over what we just did.</h4>
+          <p>We just created a controller and an HTML page in our project.</p>
+          <p>Our new controller is located in the controllers folder and it is called 'welcome_controller.rb'.</p>
+          <img src="images/welcomeController.png"/>
+          <p>Our new HTML page is located in views and in the welcome folder and it is called 'homepage.html.erb'.</p>
+          <img src="images/welcomeHomepage.png"/>
+          <p class="caption">The '.erb' stands for 'embedded ruby'.</p>
+          <p>Now, when we reload our website in the browser, nothing has changed. This is what we need to fix next.</p>
+          <h3 id="changeRoot">3. &nbsp; Change root page.</h3>
+          <p>Go into the config folder and find the routes.rb file. Open it up and it should look like this:</p>
+          <img src="images/routes.png"/>
+          <p>Under <code class="inline">get 'welcome/homepage'</code> type:</p>
+          <div class="code">
+            <code>root 'welcome#homepage'</code>
+          </div>
+          <p>Save the file and then reload the page in your browser. It should look like this:</p>
+          <img src="images/newHomepage.png"/>
+          <p>Awesome! Now we have our homepage up and ready for customization.</p>
+          <h2 id="customize">Customize our page:</h2>
+          <h3 id="addHTML">1. &nbsp; Add some HTML.</h3>
+          <h4>Our page is looking pretty dull. Let's spice it up!</h4>
+          <p>Delete everything in the 'homepage.html.erb' file. Replace it with this:</p>
+          <div class="code">
+            <code>
+              &lt;div id="container"><br>&nbsp;&nbsp;
+                &lt;h1>Pirate jokes&lt;/h1><br><br>&nbsp;&nbsp;
+
+                &lt;div class="joke"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;h3>Why don’t pirates shower before they walk the plank?&lt;/h3><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;p>Because they’ll just wash up on shore later.&lt;/p><br>&nbsp;&nbsp;
+                &lt;/div><br>&nbsp;&nbsp;
+                &lt;div class="joke"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;h3>Why is pirating so addictive?&lt;/h3><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;p>They say once ye lose yer first hand, ye get hooked!&lt;/p><br>&nbsp;&nbsp;
+                &lt;/div><br>&nbsp;&nbsp;
+                &lt;div class="joke"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;h3>How do pirates know that they are pirates?&lt;/h3><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;p>They think, therefore they ARRRR!!!!!&lt;/p><br>&nbsp;&nbsp;
+                &lt;/div><br>&nbsp;&nbsp;
+                &lt;!--Put image text here--><br>
+              &lt;/div>
+            </code>
+          </div>
+          <p>It should look like this in the editor:</p>
+          <img src="images/firstHtml.png"/>
+          <h4>Reload your browser and see our changes.</h4>
+          <img src="images/browser1.png"/>
+          <h3 id="addImages">2. &nbsp; Add some images.</h3>
+          <p>I got some images off of a royalty free website. You are free to use them in your website as well. Just right click on them and click 'Save Image As...'</p>
+          <img style="width: 20%; border: 0;" src="images/pirate.png"/>
+          <img style="width: 20%; border: 0;" src="images/parrot.png"/>
+          <p>Drag and drop the images into the images folder of our project. This is located in assets.</p>
+          <img src="images/imagesFolder.png"/>
+          <h4>Go back into our html page.</h4>
+          <p>Replace <code class="inline">&lt;!--Put image text here--></code> with:</p>
+          <div class="code">
+            <code>&lt;img src="assets/parrot.png"/><br>&lt;img src="assets/pirate.png"/></code>
+          </div>
+          <p>Now reload your page. You will see the images at the bottom like this:</p>
+          <img src="images/imagesInPage.png"/>
+          <h3 id="addCSS">3. &nbsp; Add some CSS</h3>
+          <p>Right now, our page is pretty plain, so let's add some CSS to make it more pleasing.</p>
+          <h4>Open our CSS file.</h4>
+          <p>
+            When we created our welcome controller and html homepage, we also automatially created a css page for them. Navigate to assets, then stylesheets and you will see 'welcome.scss'.
+          </p>
+          <img src="images/welcomecss.png"/>
+          <p>Add this to that file:</p>
+          <div class="code">
+            <code>
+              #container {<br>&nbsp;&nbsp;
+                  width: 700px;<br>&nbsp;&nbsp;
+                  margin: auto;<br>&nbsp;&nbsp;
+                  font-family: 'Arial', sans-serif;<br>
+              }<br>
+              h1 {<br>&nbsp;&nbsp;
+                  text-align: center;<br>
+              }<br>
+              .joke {<br>&nbsp;&nbsp;
+                  border: 2px solid #777;<br>&nbsp;&nbsp;
+                  border-radius: 10px;<br>&nbsp;&nbsp;
+                  margin-bottom: 25px;<br>&nbsp;&nbsp;
+                  padding: 15px;<br>
+              }<br>
+              img {<br>&nbsp;&nbsp;
+                  width: 33%;<br>
+              }
+            </code>
+          </div>
+          <p>Save your project. Now when you reload your page, it should look like this:</p>
+          <img src="images/cssed.png"/>
+          <p>Doesn't that look better?</p>
+          <h2>Conclusion</h2>
+          <h4>That is it!</h4>
+          <p>
+            You did it! You made a simple website with Ruby on Rails. Now that you have the skills to do this, you can go on and challenge yourself with harder projects. This barely scraped the surface of all the functionality that Rails has. Go find a tutorial on creating a simple blog website.
+          </p>
+          <h4>Thanks for reading!</h4>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+
+        </div>
+        <a name="bottom"></a>
+      </div>
+    </body>
+</html>
