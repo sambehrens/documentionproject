@@ -23,7 +23,7 @@
                 <li><a href="#startServer">Start the server</a></li>
               </ul>
             </li>
-            <li><a href="#createPage">Create a page</a></li>
+            <li><a href="#createPage">Create a webpage</a></li>
             <li>
               <ul class="internalUl">
                 <li><a href="#openText">Open text editor</a></li>
@@ -31,7 +31,7 @@
                 <li><a href="#changeRoot">Change root page</a></li>
               </ul>
             </li>
-            <li><a href="#customize">Customize page</a></li>
+            <li><a href="#customize">Customize the page</a></li>
             <li>
               <ul class="internalUl">
                 <li><a href="#addHTML">Add HTML</a></li>
@@ -127,17 +127,17 @@
           <p class="caption">Here, 'generate' can be shortened to just 'g'.</p>
           <h4><i>Let's go over what we just did.</i></h4>
           <p>We just created a controller and an HTML page in our project.</p>
-          <p>Our new controller is located in the controllers folder and it is called 'welcome_controller.rb' (Figure 2.2).</p>
+          <p>Our new controller is located in the controllers folder and it is called <span class="inline">welcome_controller.rb</span> (Figure 2.2).</p>
           <img class="image" src="images/welcomeController.png"/>
           <p class="caption">Figure 2.2</p>
-          <p>Our new HTML page is located in views and in the welcome folder and it is called 'homepage.html.erb' (Figure 2.3).</p>
+          <p>Our new HTML page is located in views and in the welcome folder and it is called <span class="inline">homepage.html.erb</span> (Figure 2.3).</p>
           <img class="image" src="images/welcomeHomepage.png"/>
           <p class="caption">Figure 2.3</p>
           <p class="caption">The '.erb' stands for 'embedded ruby'.</p>
           <p>Now, when we reload our website in the browser, nothing has changed. This is what we need to fix next.</p>
           <hr class="lite"/>
           <h3 id="changeRoot">3. &nbsp; Change root page.</h3>
-          <p>Go into the config folder and find the routes.rb file. Open it up and it should look like this(Figure 2.4):</p>
+          <p>Go into the config folder and find the <span class="inline">routes.rb</span> file. Open it up and it should look like this (Figure 2.4):</p>
           <img class="image" src="images/routes.png"/>
           <p class="caption">Figure 2.4</p>
           <p>Under <code class="inline">get 'welcome/homepage'</code> type:</p>
@@ -153,7 +153,7 @@
           <hr class="lite"/>
           <h3 id="addHTML">1. &nbsp; Add some HTML.</h3>
           <h4>Our page is looking pretty dull. Let's spice it up!</h4>
-          <p>Delete everything in the 'homepage.html.erb' file. Replace it with this:</p>
+          <p>Delete everything in the <span class="inline">homepage.html.erb</span> file. Replace it with this:</p>
           <div class="code">
             <code>
               &lt;div id="container"><br>&nbsp;&nbsp;
@@ -202,7 +202,7 @@
           <p>Right now, our page is pretty plain, so let's add some CSS to make it more pleasing.</p>
           <h4>Open our CSS file.</h4>
           <p>
-            When we created our welcome controller and html homepage, we also automatially created a css page for them. Navigate to assets, then stylesheets and you will see 'welcome.scss' (Figure 3.5).
+            When we created our welcome controller and html homepage, we also automatially created a css page for them. Navigate to assets, then stylesheets and you will see <span class="inline">welcome.scss</span> (Figure 3.5).
           </p>
           <img class="image" src="images/welcomecss.png"/>
           <p class="caption">Figure 3.5</p>
