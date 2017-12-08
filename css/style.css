@@ -2,18 +2,37 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #663c96;
   color: #FFF;
   font-family: 'Lato', sans-serif;
 }
 
-.mainContainer {
-  width: 990px;
-  margin: auto;
+.container {
 }
 
-.container {
-  width: 780px;
+.first_container {
+  background-color: #663c96;
+}
+
+.center {
+  max-width: 780px;
+  margin: auto;
+  overflow: auto;
+}
+
+.second_container {
+  background-color: #5B6474;
+}
+
+.third_container {
+  background-color: #CE613E;
+}
+
+.fourth_container {
+  background-color: #3B4960;
+}
+
+.fifth_container {
+  background-color: #72B49B;
 }
 
 h1, h2 {
@@ -23,7 +42,7 @@ h1, h2 {
 
 h3, h4, h5 {
     font-family: 'Lato', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 h1 {
@@ -79,8 +98,13 @@ hr {
 
 .caption {
   margin-top: 5px;
-  color: #be91f2;
-  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+}
+
+.reasoning {
+  background-color: rgba(255,255,255,0.175);
+  padding: 12px 25px;
 }
 
 .scrolling {
@@ -89,11 +113,12 @@ hr {
 }
 
 .inline {
-  background-color: #A671E2;
+  background-color: rgba(255,255,255,0.3);
   padding: 5px 5px 5px 7px;
   color: #FFF;
   border-radius: 2px;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .suggest {
@@ -106,6 +131,15 @@ hr {
   border-radius: 5px;
   margin: auto;
   max-width: 100%;
+}
+
+.image_title {
+  border: 3px solid rgba(255,255,255,0.5);
+  border-bottom: none;
+  padding: 10px 15px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  display:inline-block;
 }
 
 .small {
@@ -134,15 +168,16 @@ hr {
 }
 
 .lite {
-  border: 1px solid #A671E2;
+  border: 1px solid rgba(255,255,255,0.2);
   margin-left: 0;
   width: 10%;
 }
 
 #navigation {
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 25px;
+  right: 5%;
   float: right;
   margin-top: 150px;
   padding-right: 5px;
@@ -161,7 +196,7 @@ hr {
 
 .navList li a {
   padding-left: 15px;
-  color: #be91f2;
+  color: rgba(255,255,255,0.5);
   border-left: 3px solid transparent;
   text-decoration: none;
   font-size: 1em;
@@ -193,7 +228,7 @@ hr {
 
 .internalUl li a {
   padding-left: 20px;
-  color: #A671E2;
+  color: rgba(255,255,255,0.3);
   border-left: 3px solid transparent;
   text-decoration: none;
   font-size: 0.9em;

@@ -9,68 +9,69 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+      <div class='container'>
       <div class="darken"></div>
-      <div class="mainContainer">
-
-        <div id="navigation">
-          <ul class="navList">
-            <li><a class="topbot" href="#top">Top</a></li>
-            <li><a href="#before">Before you begin</a></li>
-            <li><a href="#settingUp">Setting up</a></li>
-            <li>
-              <ul class="internalUl">
-                <li><a href="#newProject">Create new project</a></li>
-                <li><a href="#startServer">Start the server</a></li>
-              </ul>
-            </li>
-            <li><a href="#createPage">Create a webpage</a></li>
-            <li>
-              <ul class="internalUl">
-                <li><a href="#openText">Open text editor</a></li>
-                <li><a href="#createHome">Create homepage</a></li>
-                <li><a href="#changeRoot">Change root page</a></li>
-              </ul>
-            </li>
-            <li><a href="#customize">Customize the page</a></li>
-            <li>
-              <ul class="internalUl">
-                <li><a href="#addHTML">Add HTML</a></li>
-                <li><a href="#addImages">Add images</a></li>
-                <li><a href="#addCSS">Add CSS</a></li>
-              </ul>
-            </li>
-            <li><a class="topbot" href="#bottom">Conclusion</a></li>
-          </ul>
-        </div>
-
-        <div class="container">
+      <div id="navigation">
+        <ul class="navList">
+          <li><a class="topbot" href="#top">Top</a></li>
+          <li><a href="#before">Before You Begin</a></li>
+          <li><a href="#settingUp">Setting Up</a></li>
+          <li>
+            <ul class="internalUl">
+              <li><a href="#newProject">Create New Project</a></li>
+              <li><a href="#startServer">Start The Server</a></li>
+            </ul>
+          </li>
+          <li><a href="#createPage">Create a Webpage</a></li>
+          <li>
+            <ul class="internalUl">
+              <li><a href="#openText">Open Text Editor</a></li>
+              <li><a href="#createHome">Create Homepage</a></li>
+              <li><a href="#changeRoot">Change Root Page</a></li>
+            </ul>
+          </li>
+          <li><a href="#customize">Customize The Page</a></li>
+          <li>
+            <ul class="internalUl">
+              <li><a href="#addHTML">Add HTML</a></li>
+              <li><a href="#addImages">Add Images</a></li>
+              <li><a href="#addCSS">Add CSS</a></li>
+            </ul>
+          </li>
+          <li><a class="topbot" href="#bottom">Conclusion</a></li>
+        </ul>
+      </div>
+      <div class='first_container'>
+        <div class='center'>
           <a name="top"></a>
-          <h3>A Beginner's Guide to:</h3>
-          <h1 class="title">Building a Website with Ruby on Rails!</h1>
+          <h3 style='font-weight: 500;'>A Beginner's Guide to:</h3>
+          <h1 class="title">Building a Website with Ruby on Rails</h1>
           <p>By Sam Behrens</p>
           <hr/>
           <h2 id="before">Before You Begin</h2>
           <p>
-            This guide will help you build your own website using the Rails Framework for Ruby. You should already have a basic understanding of the Ruby programming language and its syntax and you should know what Rails is. I also highly recommend that you know HTML and CSS. This guide covers only OSX and Linux, however, it would work on Windows with Git Bash rather than command prompt.
+            This guide will help you build your own website using the Rails Framework for Ruby. You should already have a basic understanding of the Ruby programming language and its syntax and you should know what Rails is. I also highly recommend that you know HTML and CSS. This guide covers only OSX and Linux; however, it would work on Windows with Git Bash rather than command prompt.
           </p>
           <p>
             I am not going to cover installation of Ruby and Rails so if you haven’t done so, install them now. Here is a useful website for that: <a href="http://installrails.com/" target="_blank">installrails.com</a>.
           </p>
-          <p class="suggest">Tip: To zoom in on images, click on them. Then to zoom out, click on them again.</p>
-          <hr/>
+        </div>
+      </div>
+      <div class='second_container'>
+        <div class='center'>
           <h2 id="settingUp">Setting Up Your Project</h2>
           <hr class="lite"/>
-          <h3 id="newProject">1. &nbsp; Create a new Rails Project</h3>
-          <p>
-            Open Terminal and navigate to the desktop. This is where you will create your project. To do this, enter:
-          </p>
+          <h3 id="newProject">1. &nbsp; Create a New Rails Project</h3>
+          <h4>1.1: &nbsp; Open Terminal and navigate to the desktop.</h4>
+          <p>This is where you will create your project. To do this, enter the following in Terminal:</p>
           <div class="code">
             <code>cd ~/Desktop</code>
           </div>
           <p>It should look like this (Figure 1.1): <br><span style="font-style: italic;">(instead of my name, yours will be there)</span></p>
           <img class="image small" title="cd stands for change directory" src="images/cdDesktop.png"/>
           <p class="caption">Figure 1.1</p>
-          <h4>Create your new project.</h4>
+          <p class="caption">Tip: To zoom in on images, click on them. Then to zoom back out, click on them again.</p>
+          <h4>1.2: &nbsp; Make the new project.</h4>
           <p>In Terminal, type:</p>
           <div class="code">
             <code>rails new sample_app</code>
@@ -79,16 +80,16 @@
             I am going to call my project sample_app but you can enter whatever you want instead. Just remember, any spaces in your name need to be replaced with underscores “_”.
           </p>
           <p><i>You have just created your first Rails project. Nice job!</i></p>
-          <h4>Let’s navigate to your new project in the Terminal.</h4>
+          <h4>1.3: &nbsp; Navigate to the new project.</h4>
           <p>In Terminal, type:</p>
           <div class="code">
             <code>cd sample_app</code>
           </div>
           <p>Done!</p>
           <hr class="lite"/>
-          <h3 id="startServer">2. &nbsp; Start the server so we can see our website</h3>
-          <p>Now that we have our project created, we want to get it running. Here is how to do that.</p>
-          <p>In Terminal, type:</p>
+          <h3 id="startServer">2. &nbsp; Start the Server</h3>
+          <p class='reasoning'>Now that we have our project created, we want to get it running so we can see our website. Here is how to do that.</p>
+          <h4>2.1: &nbsp; In Terminal, type:</h4>
           <div class="code">
             <code>rails server</code>
           </div>
@@ -96,64 +97,76 @@
           <p>You should see something like this (Figure 1.2):</p>
           <img class="image small" src="images/railsServer.png"/>
           <p class="caption">Figure 1.2</p>
-          <p>In your web browser, enter <a href="http://0.0.0.0:3000/" target="_blank">http://0.0.0.0:3000/</a> and you should see a Welcome to Rails page (Figure 1.3).</p>
+          <h4>2.2: &nbsp; In your web browser, enter <a href="http://0.0.0.0:3000/" target="_blank">http://0.0.0.0:3000/</a></h4>
+          <p>You should see a Welcome to Rails page (Figure 1.3).</p>
           <img class="image" src="images/welcomePage.png"/>
           <p class="caption">Figure 1.3</p>
-          <p>For the duration of this guide, I will have the server running. Since we are doing this, we need to <strong>open a new Terminal window</strong> to enter future commands.</p>
-          <hr/>
+          <h4>2.3: &nbsp; Open a new Terminal window.</h4>
+          <p>To do this, right click on the Terminal icon in your dock and select "New Window".
+          <p class='reasoning'>Now that the server is running, we will leave it on for the duration of this guide. We cannot type commands while the server is running so that is why we needed to open a new window.</p>
+        </div>
+      </div>
+      <div class='third_container'>
+        <div class='center'>
           <h2 id="createPage">Create a Webpage</h2>
           <hr class="lite"/>
-          <h3 id="openText">1. &nbsp; Open your preferred text editor.</h3>
-          <p class="suggest">
+          <h3 id="openText">3. &nbsp; Open Preferred Text Editor</h3>
+          <p class="reasoning">
             I prefer <a href="http://brackets.io/" target="_blank">Brackets</a> because it is simple and looks good. A more popular one that you may use is <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a>. Both will work for our purposes.
           </p>
+          <h4>3.1 &nbsp; Open your project folder in your text editor.</h4>
           <p>
-            Open your project folder in your text editor. You should be able to see something like this with all of the folders laid out on the left (Figure 2.1).
+             You should be able to see something like this with all of the folders laid out on the left (Figure 2.1).
           </p>
           <img class="image" src="images/openTextEditor.png"/>
           <p class="caption">Figure 2.1</p>
-          <p>
+          <p class='reasoning'>
             Take a look around and familiarize yourself with where things are. The main folders to look out for are assets, controllers, models, and views.
           </p>
           <hr class="lite"/>
-          <h3 id="createHome">2. &nbsp; Let's create our homepage.</h3>
-          <p>
-            First, we need to go back to the Terminal window that we opened after we started our server. Remember not to use the one running the server or you will have to stop it.
+          <h3 id="createHome">4. &nbsp; Create the Homepage</h3>
+          <p class='reasoning'>
+            We need to go back to the Terminal window that we opened after we started our server. Remember not to use the one running the server or you will have to stop it.
           </p>
-          <p>In Terminal, type:</p>
+          <h4>4.1 &nbsp; In Terminal, type:</h4>
           <div class="code">
             <code>rails generate controller welcome homepage</code>
           </div>
           <p class="caption">Here, 'generate' can be shortened to just 'g'.</p>
-          <h4><i>Let's go over what we just did.</i></h4>
-          <p>We just created a controller and an HTML page in our project.</p>
-          <p>Our new controller is located in the controllers folder and it is called <span class="inline">welcome_controller.rb</span> (Figure 2.2).</p>
+          <p class='reasoning'>We just created a controller and an HTML page in our project.</p>
+          <p>The new controller is located in the controllers folder and it is called <span class="inline">welcome_controller.rb</span> (Figure 2.2).</p>
           <img class="image" src="images/welcomeController.png"/>
           <p class="caption">Figure 2.2</p>
-          <p>Our new HTML page is located in views and in the welcome folder and it is called <span class="inline">homepage.html.erb</span> (Figure 2.3).</p>
+          <p>The new HTML page is located in views and in the welcome folder and it is called <span class="inline">homepage.html.erb</span> (Figure 2.3).</p>
           <img class="image" src="images/welcomeHomepage.png"/>
           <p class="caption">Figure 2.3</p>
           <p class="caption">The '.erb' stands for 'embedded ruby'.</p>
-          <p>Now, when we reload our website in the browser, nothing has changed. This is what we need to fix next.</p>
+          <p class='reasoning'>Now, when you reload your website in the browser, nothing will change. This is what we are going to fix next.</p>
           <hr class="lite"/>
-          <h3 id="changeRoot">3. &nbsp; Change root page.</h3>
-          <p>Go into the config folder and find the <span class="inline">routes.rb</span> file. Open it up and it should look like this (Figure 2.4):</p>
+          <h3 id="changeRoot">5. &nbsp; Change Root Page</h3>
+          <p class='reasoning'>The root page is the page that opens when you go to the website's url. It is kind of like a homepage.</p>
+          <h4>5.1 &nbsp; Find and open the <span class="inline">routes.rb</span> file.</h4>
+          <p>It should look like this (Figure 2.4):</p>
           <img class="image" src="images/routes.png"/>
           <p class="caption">Figure 2.4</p>
-          <p>Under <code class="inline">get 'welcome/homepage'</code> type:</p>
+          <h4>5.2 &nbsp; Under <code class="inline">get 'welcome/homepage'</code> type:</h4>
           <div class="code">
             <code>root 'welcome#homepage'</code>
           </div>
-          <p>Save the file and then reload the page in your browser. It should look like this "(Figure 2.5)":</p>
+          <h4>5.3 &nbsp; Save the file and then reload the page in your browser.</h4>
+          <p>It should look like this "(Figure 2.5)":</p>
           <img class="image" src="images/newHomepage.png"/>
           <p class="caption">Figure 2.5</p>
-          <p><i>Awesome! Now we have our homepage up and ready for customization.</i></p>
-          <hr/>
+          <p class='reasoning'>Awesome! Now we have our homepage up and ready for customization.</p>
+        </div>
+      </div>
+      <div class='fourth_container'>
+        <div class='center'>
           <h2 id="customize">Customize Our Page</h2>
           <hr class="lite"/>
-          <h3 id="addHTML">1. &nbsp; Add some HTML.</h3>
-          <h4>Our page is looking pretty dull. Let's spice it up!</h4>
-          <p>Delete everything in the <span class="inline">homepage.html.erb</span> file. Replace it with this:</p>
+          <h3 id="addHTML">6. &nbsp; Add Some HTML</h3>
+          <p class='reasoning'>Our page is looking pretty dull. Let's spice it up!</p>
+          <h4>6.1 &nbsp; Delete everything in the <span class="inline">homepage.html.erb</span> file. Replace it with this:</h4>
           <div class="code">
             <code>
               &lt;div id="container"><br>&nbsp;&nbsp;
@@ -178,35 +191,37 @@
           <p>It should look like this in the editor (Figure 3.1):</p>
           <img class="image" src="images/firstHtml.png"/>
           <p class="caption">Figure 3.1</p>
-          <h4>Reload your browser and see our changes (Figure 3.2).</h4>
+          <h4>6.2 &nbsp; Save and reload your browser and see the changes (Figure 3.2).</h4>
           <img class="image" src="images/browser1.png"/>
           <p class="caption">Figure 3.2</p>
           <hr class="lite"/>
-          <h3 id="addImages">2. &nbsp; Add some images.</h3>
-          <p>I got some images off of a royalty free website. You are free to use them in your website as well. Just right click on them and click 'Save Image As...'</p>
+          <h3 id="addImages">7. &nbsp; Add Some Images</h3>
+          <p class='reasoning'>I got some images off of a royalty free website. You are free to use them in your website as well. Just right click on them and click 'Save Image As...'</p>
           <img class="image" style="width: 20%; border: 0;" src="images/pirate.png"/>
           <img class="image" style="width: 20%; border: 0;" src="images/parrot.png"/>
-          <p>Drag and drop the images into the images folder (Figure 3.3) of our project. This is located in assets.</p>
+          <h4>7.1 &nbsp; Drag and drop the images into the images folder of our project.</h4>
+          <p>This is located in assets(Figure 3.3).</p>
           <img class="image" src="images/imagesFolder.png"/>
           <p class="caption">Figure 3.3</p>
-          <h4>Go back into our html page.</h4>
-          <p>Replace <code class="inline">&lt;!--Put image text here--></code> with:</p>
+          <h4>7.2 &nbsp; Go back into our html page.</h4>
+          <h4>7.3 &nbsp; Replace <code class="inline">&lt;!--Put image text here--></code> with:</h4>
           <div class="code">
             <code>&lt;img src="assets/parrot.png"/><br>&lt;img src="assets/pirate.png"/></code>
           </div>
-          <p>Now reload your page. You will see the images at the bottom like this (Figure 3.4):</p>
+          <h4>7.4 &nbsp; Now reload your page.</h4>
+          <p>You will see the images at the bottom like this (Figure 3.4):</p>
           <img class="image" src="images/imagesInPage.png"/>
           <p class="caption">Figure 3.4</p>
           <hr class="lite"/>
-          <h3 id="addCSS">3. &nbsp; Add some CSS.</h3>
-          <p>Right now, our page is pretty plain, so let's add some CSS to make it more pleasing.</p>
-          <h4>Open our CSS file.</h4>
-          <p>
+          <h3 id="addCSS">8. &nbsp; Add Some CSS</h3>
+          <p class='reasoning'>Right now, our page is pretty plain, so let's add some CSS to make it more pleasing.</p>
+          <h4>8.1 &nbsp; Open our CSS file.</h4>
+          <p class='reasoning'>
             When we created our welcome controller and html homepage, we also automatially created a css page for them. Navigate to assets, then stylesheets and you will see <span class="inline">welcome.scss</span> (Figure 3.5).
           </p>
           <img class="image" src="images/welcomecss.png"/>
           <p class="caption">Figure 3.5</p>
-          <p>Add this to that file:</p>
+          <h4>8.2 &nbsp; Add this to that file:</h4>
           <div class="code">
             <code>
               #container {<br>&nbsp;&nbsp;
@@ -228,11 +243,15 @@
               }
             </code>
           </div>
-          <p>Save your project. Now when you reload your page, it should look like this (Figure 3.6):</p>
+          <h4>8.3 &nbsp; Save your project.</h4>
+          <p>Now when you reload your page, it should look like this (Figure 3.6):</p>
           <img class="image" src="images/cssed.png"/>
           <p class="caption">Figure 3.6</p>
-          <p>Doesn't that look better?</p>
-          <hr/>
+          <p class='reasoning'>Doesn't that look better?</p>
+        </div>
+      </div>
+      <div class='fifth_container'>
+        <div class='center'>
           <h2>Conclusion</h2>
           <hr class="lite"/>
           <h4>That is it!</h4>
@@ -244,8 +263,8 @@
           <p>&nbsp;</p>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
-
         </div>
+      </div>
         <a name="bottom"></a>
       </div>
     </body>
